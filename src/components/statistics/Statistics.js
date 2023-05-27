@@ -2,17 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './Statistics.css'
 
-export const Statistics = ({ state, total, feedback}) => {
+export const Statistics = ({ good, neutral, bad,  total, feedback}) => {
   return (
   <div>
     <p>
-        good:<span>{state.good}</span>
+        good:<span>{good}</span>
       </p>
       <p>
-        neutral:<span>{state.neutral}</span>
+        neutral:<span>{neutral}</span>
       </p>
       <p>
-        bad:<span>{state.bad}</span>
+        bad:<span>{bad}</span>
       </p>
       <p>
         Total:<span>{total}</span>
@@ -27,9 +27,9 @@ export const Statistics = ({ state, total, feedback}) => {
 };
 
 Statistics.propTypes = {
-    state: PropTypes.shape({
+  
       good: PropTypes.number.isRequired,
       neutral: PropTypes.number.isRequired,
       bad: PropTypes.number.isRequired,
-    }),
+   
   };
